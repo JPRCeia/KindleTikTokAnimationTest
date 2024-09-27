@@ -1,0 +1,51 @@
+/* Container for the entire book */
+.book-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 100%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+  
+  /* Container for each chapter */
+  .chapter-container {
+    margin-bottom: 20px;
+  }
+  
+  /* Title styling for chapters */
+  .chapter-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Container for each page */
+  .page-container {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+  }
+  
+  /* Add responsive behavior */
+  @media (max-width: 768px) {
+    .chapter-title {
+      font-size: 20px;
+    }
+    .page-container {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .chapter-title {
+      font-size: 18px;
+    }
+    .page-container {
+      padding: 8px;
+    }
+  }
+  
