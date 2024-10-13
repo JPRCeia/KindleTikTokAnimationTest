@@ -1,0 +1,65 @@
+
+Capítulo 1: Introdução ao EPUB
+<TEXT>
+Este é o primeiro parágrafo do capítulo 1. Neste capítulo, vamos discutir os conceitos
+fundamentais do formato EPUB,
+que é amplamente utilizado para a criação de livros eletrônicos. O EPUB é um padrão aberto, o
+que significa que ele pode ser
+usado por qualquer pessoa para criar, distribuir e ler publicações digitais. Ao longo deste
+capítulo, você aprenderá como
+esse formato se estrutura, quais são suas principais vantagens e como ele se diferencia de
+outros formatos de livro eletrônico.
+<GIF-‘exemplo_epub.gif’>
+<TEXT>
+O segundo parágrafo descreve as características do EPUB, incluindo sua flexibilidade e
+compatibilidade com diferentes dispositivos
+e leitores de e-books. Além disso, veremos como o EPUB permite a integração de conteúdo
+multimídia, como imagens, vídeos e áudio,
+tornando a leitura digital uma experiência mais rica. A estrutura do EPUB é baseada em XHTML
+e CSS, o que permite que os editores
+personalizem o layout e o design do conteúdo de maneira eficaz, garantindo uma
+apresentação consistente em diferentes plataformas.
+<TEXT>
+No terceiro parágrafo, falaremos sobre a importância de seguir padrões ao criar arquivos
+EPUB. Esses padrões garantem que o conteúdo
+seja acessível, portátil e fácil de adaptar. A flexibilidade do EPUB faz dele uma escolha popular
+para a publicação de livros, revistas,
+jornais e documentos acadêmicos. Além disso, abordaremos como ferramentas de software
+especializadas podem ser usadas para criar e validar
+arquivos EPUB, garantindo que eles atendam aos requisitos do padrão.</p>
+<GIF-‘layout_epub.gif’>
+<TEXT>
+Este é o quarto parágrafo do capítulo 1. A seguir, veremos exemplos práticos de como criar
+um arquivo EPUB básico. Começaremos com
+a criação da estrutura de diretórios e a organização dos arquivos que compõem o EPUB.
+Depois disso, falaremos sobre como adicionar
+metadados ao EPUB para fornecer informações sobre o autor, título e idioma do livro. Esses
+metadados são cruciais para garantir que
+o livro seja corretamente identificado e categorizado nos leitores de e-books.
+<h1>Capítulo 2: Usando Tags Customizadas</h1>
+<GIF-‘layout_epub.gif’>
+<TEXT>
+No início deste capítulo, exploraremos a criação e utilização de tags customizadas dentro
+de arquivos EPUB. As tags customizadas
+são utilizadas para adicionar semântica e estruturar o conteúdo de maneira mais eficaz. Por
+exemplo, você pode criar tags personalizadas
+para representar seções específicas do livro ou para incorporar elementos interativos que vão
+além do texto tradicional, como quizzes
+e animações. Usando tags customizadas, você pode adicionar funcionalidades que enriquecem
+a experiência do leitor.
+<TEXT>
+Outro aspecto importante das tags customizadas é a sua aplicação em projetos de livros
+didáticos ou interativos. Com essas tags,
+é possível integrar diretamente recursos educacionais, como glossários interativos, gráficos
+dinâmicos e links contextuais para
+referências externas. Esses elementos adicionam uma camada extra de interatividade e
+ajudam a manter o leitor envolvido com o conteúdo.
+<GIF-‘custom_tag_example.gif’>
+<TEXT>
+Finalmente, falaremos sobre como as tags customizadas podem ser usadas em conjunto
+com outras tecnologias, como JavaScript e CSS,
+para criar e-books altamente personalizados. Isso permite que o autor ou editor tenha
+controle total sobre a aparência e o comportamento
+do livro eletrônico, oferecendo uma experiência de leitura única. A seguir, veremos exemplos
+de como implementar essas tags em um arquivo
+EPUB e as melhores práticas para garantir a compatibilidade com diferentes leitores de ebooks.

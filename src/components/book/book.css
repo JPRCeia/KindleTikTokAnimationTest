@@ -4,11 +4,10 @@
   scroll-snap-type: y mandatory; /* Snap to sections */
   scroll-behavior: smooth; /* Smooth scrolling */
   scroll-snap-stop: always; /* Ensure snap stops at each section */
-  scroll-padding: 50px; /* Add padding to the scroll */
   transition: scroll-behavior 1s ease-in-out; /* Slow down the scroll animation */
 }
 
-.chapter-section {
+.page-section {
   height: 100vh; /* Full viewport height */
   scroll-snap-align: start; /* Snap to the start of each section */
   background-color: #f4f4f9;
@@ -16,34 +15,48 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   margin-bottom: 20px;
-  overflow-y: scroll; /* In case page content overflows */
-}
-
-.page-section {
+  overflow-y: auto; /* In case page content overflows */
   padding: 20px;
 }
 
-.chapter-title {
+.page-title {
   padding: 20px;
   background-color: #e0e0e0;
   border-bottom: 1px solid #ccc;
 }
 
+.page-section p {
+  font-size: 16px; /* Default font size */
+}
+
+.page-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
+}
+
 /* Add responsive behavior */
 @media (max-width: 768px) {
-  .chapter-title {
+  .page-title {
     font-size: 20px;
   }
   .page-section {
     padding: 10px;
   }
+  .page-section p {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
 }
 
 @media (max-width: 480px) {
-  .chapter-title {
+  .page-title {
     font-size: 18px;
   }
   .page-section {
     padding: 8px;
+  }
+  .page-section p {
+    font-size: 12px; /* Adjust font size for smaller screens */
   }
 }
