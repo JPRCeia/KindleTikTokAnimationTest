@@ -1,51 +1,49 @@
-/* Container for the entire book */
-.book-container {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    max-width: 100%;
-    overflow-y: auto;
-    scroll-behavior: smooth;
-  }
-  
-  /* Container for each chapter */
-  .chapter-container {
-    margin-bottom: 20px;
-  }
-  
-  /* Title styling for chapters */
+.book-section {
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  scroll-snap-type: y mandatory; /* Snap to sections */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  scroll-snap-stop: always; /* Ensure snap stops at each section */
+  scroll-padding: 50px; /* Add padding to the scroll */
+  transition: scroll-behavior 1s ease-in-out; /* Slow down the scroll animation */
+}
+
+.chapter-section {
+  height: 100vh; /* Full viewport height */
+  scroll-snap-align: start; /* Snap to the start of each section */
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  overflow-y: scroll; /* In case page content overflows */
+}
+
+.page-section {
+  padding: 20px;
+}
+
+.chapter-title {
+  padding: 20px;
+  background-color: #e0e0e0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Add responsive behavior */
+@media (max-width: 768px) {
   .chapter-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 20px;
   }
-  
-  /* Container for each page */
-  .page-container {
-    padding: 15px;
-    margin-bottom: 20px;
-    background-color: #f4f4f9;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
+  .page-section {
+    padding: 10px;
   }
-  
-  /* Add responsive behavior */
-  @media (max-width: 768px) {
-    .chapter-title {
-      font-size: 20px;
-    }
-    .page-container {
-      padding: 10px;
-    }
+}
+
+@media (max-width: 480px) {
+  .chapter-title {
+    font-size: 18px;
   }
-  
-  @media (max-width: 480px) {
-    .chapter-title {
-      font-size: 18px;
-    }
-    .page-container {
-      padding: 8px;
-    }
+  .page-section {
+    padding: 8px;
   }
-  
+}

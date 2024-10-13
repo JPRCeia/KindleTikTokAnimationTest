@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import './book.css'; // Import the CSS file
 
 const loadBook = async () => {
   const bookText = `
-    CHAPTER 1
+    CHAPTER 
+    PAGE_BREAK
 Numa manhã, ao despertar de sonhos inquietantes, Gregório Samsa deu por
     si na cama transformado num gigantesco inseto. Estava deitado sobre o dorso, tão
     duro que parecia revestido de metal, e, ao levantar um pouco a cabeça, divisou o
@@ -30,7 +31,8 @@ Mas era
     experimentara. Oh, meu Deus, pensou, que trabalho tão cansativo escolhi! Viajar,
     dia sim, dia não.
 
-CHAPTER 2
+    CHAPTER 
+    PAGE_BREAK
 Mas era
     mpossível, estava habituado a dormir para o lado direito e, na presente situação,
     não podia virar-se. Por mais que se esforçasse por inclinar o corpo para a direita,
@@ -52,9 +54,9 @@ Mas era
   `;
   return bookText;
 };
-
 const BookReader = () => {
   const [bookContent, setBookContent] = useState([]);
+  const chapterRefs = useRef([]);
 
   useEffect(() => {
     const loadContent = async () => {
@@ -67,29 +69,33 @@ const BookReader = () => {
   }, []);
 
   const parseBook = (text) => {
-    const chapters = text.split("CHAPTER").slice(1); // Split by chapters
+    const chapters = text.split('CHAPTER').slice(1); // Split by 'Chapter' and remove the first empty element
     return chapters.map((chapterText, index) => {
-      const pages = chapterText.split("PAGE_BREAK"); // Split chapter into pages
+      const [title, ...pages] = chapterText.split('PAGE_BREAK'); // Assuming pages are separated by double newlines
       return {
-        chapter: `Chapter ${index + 1}`,
-        pages
+        title: `Chapter ${index + 1}: ${title.trim()}`,
+        pages: pages.map(pageText => ({ text: pageText.trim() }))
       };
     });
   };
 
   return (
-    <div className="book-container">
+    <section className="book-section">
       {bookContent.map((chapter, chapterIndex) => (
-        <div key={chapterIndex} className="chapter-container">
-          <h2 className="chapter-title">{chapter.chapter}</h2>
+        <section
+          key={chapterIndex}
+          className="chapter-section"
+          ref={(el) => (chapterRefs.current[chapterIndex] = el)}
+        >
+          <h2 className="chapter-title">{chapter.title}</h2>
           {chapter.pages.map((page, pageIndex) => (
-            <div key={pageIndex} className="page-container">
-              <p>{page.trim()}</p>
-            </div>
+            <section key={pageIndex} className="page-section">
+              <p>{page.text}</p>
+            </section>
           ))}
-        </div>
+        </section>
       ))}
-    </div>
+    </section>
   );
 };
 
